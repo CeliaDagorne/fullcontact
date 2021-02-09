@@ -2,17 +2,17 @@
   -webkit-font-smoothing: antialiased;
 }
 ::selection {
-  background: #FFF7C7; /* WebKit/Blink Browsers */
+  background: #fff7c7; /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
-  background: #FFF7C7; /* Gecko Browsers */
+  background: #fff7c7; /* Gecko Browsers */
 }
 
 body {
   padding: 3rem 0 0 0;
   color: #353535;
   line-height: 1.5;
-  font-family: $font-serif;
+  font-family: $font-sans-serif;
   font-size: 20px;
 
   @media (max-width: $max-width-sm) {
@@ -20,9 +20,14 @@ body {
   }
 }
 
+main {
+  padding-top: 22px;
+}
+
 .container {
-  max-width: 700px;
+  max-width: 920px;
   margin: auto;
+  width: 92%;
 
   @media (max-width: $max-width-sm) {
     padding: 0 20px;
