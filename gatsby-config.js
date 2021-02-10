@@ -9,8 +9,8 @@ const reponame = process.env.PRISMIC_REPO_NAME || prismicRepo
 const apiKey = process.env.PRISMIC_API_KEY || accessToken
 const prismicReleaseID = process.env.PRISMIC_RELEASE_ID || releaseID
 
-const blogHomeSchema = require('./custom_types/bloghome.json')
-const postSchema = require('./custom_types/post.json')
+// const blogHomeSchema = require('./custom_types/bloghome.json')
+// const postSchema = require('./custom_types/post.json')
 
 const gastbySourcePrismicConfig = {
   resolve: 'gatsby-source-prismic',
@@ -21,8 +21,8 @@ const gastbySourcePrismicConfig = {
     prismicToolbar: true,
     linkResolver: () => (doc) => linkResolver(doc),
     schemas: {
-      blogHome: blogHomeSchema,
-      post: postSchema,
+      // blogHome: blogHomeSchema,
+      // post: postSchema,
     },
   },
 }
