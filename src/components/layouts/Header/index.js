@@ -1,5 +1,6 @@
 import React from 'react'
 import { RichText } from 'prismic-reactjs'
+import classNames from 'classnames'
 import styles from './style.module.scss'
 import Logo from '../../../images/logo-fullcontact.png'
 
@@ -10,7 +11,7 @@ const Header = ({ data }) => {
     <div className={styles.header}>
       <div className={styles.container}>
         <a className={styles.logo} href="#home">
-          <img src={Logo} alt="Logo full contact"/>
+          <img src={Logo} alt="Logo full contact" />
         </a>
         <div className={styles.linksContainer}>
           <a className={styles.link} href={`#${RichText.asText(data.anchor_1)}`}>
@@ -22,7 +23,7 @@ const Header = ({ data }) => {
           <a className={styles.link} href={`#${RichText.asText(data.anchor_3)}`}>
             {RichText.asText(data.anchor_3)}
           </a>
-          <a className={styles.linkTel} href={`tel:${RichText.asText(data.phone)}`}>
+          <a className={classNames(styles.link, styles.linkTel)} href={`tel:${RichText.asText(data.phone)}`}>
             {RichText.asText(data.phone)}
           </a>
         </div>

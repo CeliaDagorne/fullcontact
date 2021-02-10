@@ -1,12 +1,12 @@
 import React from 'react'
-import prismicLogo from '../../images/logo-prismic.svg'
+// import prismicLogo from '../../images/logo-prismic.svg'
 
 export default () => (
   <footer className="container">
     <p>
       Footer
       {' '}
-      <a href="https://prismic.io" target="_blank" rel="noopener noreferrer">
+      {/* <a href="https://prismic.io" target="_blank" rel="noopener noreferrer">
         Prismic
       </a>
       <br />
@@ -16,7 +16,7 @@ export default () => (
           src={prismicLogo}
           alt="Gray Prismic logo"
         />
-      </a>
+      </a> */}
     </p>
   </footer>
 )

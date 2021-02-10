@@ -1,9 +1,11 @@
 // Colors
 $color-blue: #2e54e7;
+$color-lila: #eff1fe;
 $color-white: #fff;
 
-// Break points
-$max-width-sm: 767px;
-$min-width-sm: 768px;
-
-$min-width-emph: 950px;
+/* Breakpoints */
+$breakpoint-tablet: 1168px;
+$breakpoint-mobile: 920px;
+$large-desktop-width: 1600px;
+$short-mobile-height: 800px;
+$breakpoint-xs: 767px;

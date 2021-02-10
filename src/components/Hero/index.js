@@ -9,9 +9,7 @@ const Hero = ({ data }) => {
 
   return (
     <div className={styles.hero}>
-      <div className={styles.imageBackground} style={{ backgroundImage: `url(${Image})` }}>
-        {/* <img src={Image} alt="Kitchen clear" /> */}
-      </div>
+      <div className={styles.imageBackground} style={{ backgroundImage: `url(${Image})` }} />
       <div className="container">
         <p className={styles.title}>
           {RichText.asText(data.headline)}
@@ -19,8 +17,12 @@ const Hero = ({ data }) => {
           {RichText.asText(data.headline_2)}
         </p>
         <div className={styles.anchorsContainer}>
-          <a className={styles.anchor} href={`${data.first_anchor}`}>{data.first_anchor}</a>
-          <a className={styles.anchor} href={`${data.second_anchor}`}>{data.second_anchor}</a>
+          <div className={styles.anchor}>
+            <a href={`${data.first_anchor}`}>{data.first_anchor}</a>
+          </div>
+          <div className={styles.anchor}>
+            <a href={`${data.second_anchor}`}>{data.second_anchor}</a>
+          </div>
         </div>
       </div>
     </div>

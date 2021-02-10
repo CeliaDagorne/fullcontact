@@ -4,6 +4,7 @@ import { withPreview } from 'gatsby-source-prismic'
 import Layout from '../components/layouts'
 import Hero from '../components/Hero'
 import Header from '../components/layouts/Header'
+import Intros from '../components/Intros'
 
 // Query for the Blog Home content in Prismic
 export const query = graphql`
@@ -59,6 +60,7 @@ export const query = graphql`
     allPrismicIntro {
       edges {
         node {
+          id
           data {
             description {
               text
@@ -121,16 +123,17 @@ export const Homepage = ({ data }) => {
   // Define the Blog Home & Blog Post content returned from Prismic
   const headerData = data.prismicHeader.data
   const heroData = data.prismicHero.data
-  const introData = data.allPrismicIntro.edges
+  const introsData = data.allPrismicIntro.edges
   // const posts = data.allPrismicPost.edges
 
-  console.log(introData)
+  console.log(introsData)
 
   return (
     <>
       <Header data={headerData} />
       <Layout>
         <Hero data={heroData} />
+        <Intros introsData={introsData} />
       </Layout>
     </>
   )

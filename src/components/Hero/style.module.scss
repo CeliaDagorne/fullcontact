@@ -1,12 +1,18 @@
-@import '../../stylesheets/variables';
+@import '../../stylesheets/main';
 
 .hero {
   background: #eff1fe;
   display: flex;
   justify-content: center;
-  min-height: calc(100vh - 70px);
-  position: relative;
+  margin-top: 69px;
+  min-height: calc(100vh - 69px);
   overflow: hidden;
+  position: relative;
+
+  @include respond-to(smartphone) {
+    margin-top: 64px;
+    min-height: calc(100vh - 64px);
+  }
 
   > div {
     transform: translateY(-70px);
@@ -36,6 +42,10 @@
   font-weight: 600;
   line-height: 1;
   letter-spacing: -2px;
+
+  @include respond-to(smartphone) {
+    font-size: 36px;
+  }
 }
 
 .description {
@@ -45,40 +55,64 @@
 }
 
 .anchorsContainer {
-  display: flex;
   margin-top: 60px;
+
+  @include respond-to(above-smartphone) {
+    display: flex;
+  }
 }
 
 .anchor {
-  border-radius: 100px;
-  border: 2px solid $color-blue;
-  padding: 8px 50px;
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out,
-    transform 0.2s ease-in-out;
-  transform: translateY(0);
-  font-weight: 600;
-  font-size: 14px;
+  cursor: pointer;
+
+  a {
+    border-radius: 100px;
+    border: 2px solid $color-blue;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 50px;
+    transform: translateY(0);
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out,
+      transform 0.2s ease-in-out;
+  }
+
+  @include respond-to(smartphone) {
+    display: block;
+  }
 
   &:first-child {
-    background: $color-blue;
-    color: $color-white;
-    margin-right: 30px;
+    a {
+      background: $color-blue;
+      color: $color-white;
 
-    &:hover {
-      background: #eff1fe;
-      color: $color-blue;
-      transform: translateY(-6px);
+      @include respond-to(smartphone) {
+        margin-bottom: 20px;
+      }
+
+      @include respond-to(above-smartphone) {
+        margin-right: 30px;
+      }
+
+      &:hover {
+        background: #eff1fe;
+        color: $color-blue;
+        transform: translateY(-6px);
+      }
     }
   }
   &:nth-child(2) {
-    background: #eff1fe;
-    color: $color-blue;
-    margin-right: 30px;
+    a {
+      background: #eff1fe;
+      color: $color-blue;
+      margin-right: 30px;
 
-    &:hover {
-      background: $color-blue;
-      color: $color-white;
-      transform: translateY(-6px);
+      &:hover {
+        background: $color-blue;
+        color: $color-white;
+        transform: translateY(-6px);
+      }
     }
   }
 }

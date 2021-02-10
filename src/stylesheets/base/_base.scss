@@ -9,27 +9,17 @@
 }
 
 body {
-  padding: 3rem 0 0 0;
   color: #353535;
   line-height: 1.5;
   font-family: $font-sans-serif;
-  font-size: 20px;
-
-  @media (max-width: $max-width-sm) {
-    padding-top: 1rem;
-  }
-}
-
-main {
-  padding-top: 22px;
 }
 
 .container {
-  max-width: 920px;
+  max-width: 1240px;
   margin: auto;
   width: 92%;
 
-  @media (max-width: $max-width-sm) {
+  @media (max-width: $breakpoint-xs) {
     padding: 0 20px;
   }
 }
