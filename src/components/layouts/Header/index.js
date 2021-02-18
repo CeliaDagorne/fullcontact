@@ -3,6 +3,7 @@ import { RichText } from 'prismic-reactjs'
 import classNames from 'classnames'
 import styles from './style.module.scss'
 import Logo from '../../../images/logo-fullcontact.png'
+import Phone from '../../../images/phone.svg'
 
 const Header = ({ data }) => {
   if (!data) return null
@@ -24,7 +25,7 @@ const Header = ({ data }) => {
             {RichText.asText(data.anchor_3)}
           </a>
           <a className={classNames(styles.link, styles.linkTel)} href={`tel:${RichText.asText(data.phone)}`}>
-            <img src="/icons/phone.svg" alt="Telephone" />
+            <img src={Phone} alt="Telephone" />
             {RichText.asText(data.phone)}
           </a>
         </div>
