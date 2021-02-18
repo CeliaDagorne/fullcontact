@@ -124,9 +124,6 @@ export const Homepage = ({ data }) => {
   const headerData = data.prismicHeader.data
   const heroData = data.prismicHero.data
   const introsData = data.allPrismicIntro.edges
-  // const posts = data.allPrismicPost.edges
-
-  console.log(introsData)
 
   return (
     <>
