@@ -24,6 +24,7 @@ const Header = ({ data }) => {
             {RichText.asText(data.anchor_3)}
           </a>
           <a className={classNames(styles.link, styles.linkTel)} href={`tel:${RichText.asText(data.phone)}`}>
+            <img src="/icons/phone.svg" alt="Telephone" />
             {RichText.asText(data.phone)}
           </a>
         </div>
