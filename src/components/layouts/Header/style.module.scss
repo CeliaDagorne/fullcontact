@@ -50,15 +50,15 @@
   }
 
   &:before {
-    content: '';
     background: $color-lila;
-    position: absolute;
-    left: 4px;
     bottom: -4px;
-    width: 0;
+    content: '';
     height: 100%;
-    z-index: -1;
+    left: 4px;
+    position: absolute;
     transition: width 0.35s ease-in-out;
+    width: 0;
+    z-index: -1;
   }
 
   &:not(:last-child) {
@@ -76,5 +76,18 @@
     position: relative;
     top: 2px;
     width: 16px;
+  }
+
+  &:hover:before {
+    @include respond-to(smartphone) {
+      width: calc(100% + 2px);
+    }
+  }
+
+  &:before {
+    @include respond-to(smartphone) {
+      left: 6px;
+      bottom: -2px;
+    }
   }
 }

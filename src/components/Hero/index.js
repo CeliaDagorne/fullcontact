@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { RichText } from 'prismic-reactjs'
 import styles from './style.module.scss'
 
@@ -6,6 +6,11 @@ import Image from '../../images/hero-3.png'
 
 const Hero = ({ data }) => {
   if (!data) return null
+
+  useEffect(() => {
+    document.querySelector(`.${styles.hero}`).style.height = `${window.innerHeight}px`
+    console.log(document.querySelector(`.${styles.hero}`))
+  })
 
   return (
     <div className={styles.hero}>
